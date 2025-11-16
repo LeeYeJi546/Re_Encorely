@@ -9,6 +9,7 @@ import SwiftUI
 
 struct VenueView: View {
     
+    // MARK: - Constants
     fileprivate enum VenueViewConstants {
         static let mainPadding: CGFloat = 16
         static let mainLineSpacing: CGFloat = 8
@@ -18,6 +19,7 @@ struct VenueView: View {
         static let scrollPadding: CGFloat = 30
     }
     
+    // MARK: - Body
     var body: some View {
         ScrollView {
             LazyVStack {
@@ -31,6 +33,9 @@ struct VenueView: View {
         .ignoresSafeArea()
     }
     
+    // MARK: - TopContents
+    
+    /// 상단 아이콘, 이미지 영역
     private var topContents: some View {
         ZStack {
             banner
@@ -42,6 +47,7 @@ struct VenueView: View {
         }
     }
     
+    /// 아이콘 + 알람 버튼
     private var topBar: some View {
         HStack {
             Image("encorely")
@@ -56,6 +62,7 @@ struct VenueView: View {
         .padding(.horizontal, VenueViewConstants.mainPadding)
     }
     
+    /// 공연 이미지
     private var banner: some View {
         ZStack(alignment: .bottomLeading) {
             Image("mainHomeBanner")
@@ -76,6 +83,9 @@ struct VenueView: View {
         }
     }
     
+    // MARK: - ScrollContents
+    
+    /// 좌우 스크롤뷰 컨텐츠
     private var scrollContents: some View {
         VStack(spacing: VenueViewConstants.sectionSpacing) {
             oftenVenue
@@ -88,6 +98,7 @@ struct VenueView: View {
         }
     }
     
+    /// 자주 보는 공연장
     private var oftenVenue: some View {
         VStack {
             HStack {
@@ -121,6 +132,7 @@ struct VenueView: View {
         }
     }
     
+    /// 현재 진행 중인 공연
     private var ongoingShow: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -154,6 +166,7 @@ struct VenueView: View {
         }
     }
     
+    /// 인기 공연러
     private var popularAudience: some View {
         VStack {
             HStack {
@@ -187,6 +200,7 @@ struct VenueView: View {
         }
     }
     
+    /// 화제의 후기들
     private var hotTopicReview: some View {
         VStack {
             HStack {
