@@ -55,10 +55,12 @@ struct OngoingShowCard: View {
                 Text(ongoingShows.location)
                     .font(.mainTextMedium16)
                     .foregroundStyle(Color.grayColorC)
+                    .lineLimit(1)
                 
                 Text(ongoingShows.date)
                     .font(.mainTextMedium14)
                     .foregroundStyle(Color.grayColorE)
+                    .lineLimit(1)
             }
         }
     }

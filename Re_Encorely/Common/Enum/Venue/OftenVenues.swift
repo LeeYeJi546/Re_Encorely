@@ -56,4 +56,23 @@ enum OftenVenues: String, CaseIterable, Identifiable {
             return "일산서구"
         }
     }
+    
+    var address: String {
+        switch self {
+        case .goCheokSkyDome:
+            return "서울특별시 구로구 경인로 430"
+        case .kspoDome:
+            return "서울특별시 송파구 올림픽로 424"
+        case .jangChungGym:
+            return "서울특별시 중구 동호로 241"
+        case .seoulWorldcupStadium:
+            return "서울특별시 마포구 월드컵로 240"
+        case .jamsilIndoorStadium:
+            return "서울특별시 송파구 올림픽로 25"
+        case .inspireArena:
+            return "인천광역시 중구 영종해안남로 321"
+        case .goyangMainStadium:
+            return "경기도 고양시 일산서구 중앙로 160"
+        }
+    }
 }
